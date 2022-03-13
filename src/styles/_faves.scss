@@ -1,0 +1,44 @@
+.favorites {
+  position:absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.left-home{
+  display: none;
+
+  @include mq($desktop) {
+    display: block;
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: fixed;
+    top: 50%;
+    left: 100px;
+    animation: slide-left 1s;
+  }
+}
+
+.botleft-home{
+  display: none;
+
+  @include mq($desktop) {
+    display: block;
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+    animation: slide-botleft-corner 1s;
+  }
+}
+
+@keyframes slide-left {
+  0% {transform: translate(170px, 0px) ;}
+  100% {transform: translate(0px, 0px) ;}
+}
+
+@keyframes slide-botleft-corner {
+  0% {transform: translate(170px, -170px) ;}
+  100% {transform: translate(0px, 0px) ;}
+}

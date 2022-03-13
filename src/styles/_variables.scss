@@ -1,0 +1,25 @@
+//Variables
+
+//Font sizes
+$text-xxxs: clamp(0.43rem, 0.28rem + 0.78vw, 0.83rem);
+$text-xxs: clamp(0.52rem, 0.32rem + 1.01vw, 1.04rem);
+$text-xs: clamp(0.63rem, 0.36rem + 1.32vw, 1.3rem);
+$text-sm: clamp(0.75rem, 0.41rem + 1.71vw, 1.63rem);
+$text-md: clamp(0.9rem, 0.46rem + 2.21vw, 2.03rem);
+$text-lg: clamp(1.08rem, 0.51rem + 2.85vw, 2.54rem);
+$text-xl: clamp(1.3rem, 0.56rem + 3.66vw, 3.17rem);
+$text-xxl: clamp(1.56rem, 0.61rem + 4.71vw, 3.97rem);
+$text-xxl: clamp(1.87rem, 0.66rem + 6.04vw, 4.96rem);
+
+//Colors
+$textColor: #fff;
+$dark-100: #d2d3d3;
+$dark-200: #7d7f80;
+$dark-300: #555759;
+$dark-400: #2d3032;
+$accentColor: #9615db;
+
+//Breakpoints
+$tablet: 750;
+$desktop: 950;
+$desktopWide: 1200;

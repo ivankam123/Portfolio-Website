@@ -1,0 +1,113 @@
+.single-main {
+
+
+  header {
+  display: none;
+
+  @include mq($desktop) {
+    margin-top: -2rem;
+    display: flex;
+    font-weight: bold;
+    font-size: 1.2rem;
+    justify-content: center;
+    animation: slide-up 1s;
+  }
+  }
+  
+}
+
+
+
+
+
+.single-project-section {
+
+  //--------------------------mobile-tablet content section
+  @media (max-width: 950px){
+    padding: 0 64px;
+    margin-top: 85px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .single-main-img {
+      max-height: 300px;
+      max-width: 400px;
+    }
+
+    .design-section, .development-section, .liveSite{
+        max-width: 400px;
+
+
+    }
+
+  }
+
+
+  // ------------------------------desktop content section
+  @include mq($desktop) {
+   img {
+     max-width: 500px;
+     max-height: 400px;
+   }
+  }
+}
+
+
+
+//Styling next and previous buttons
+.nextPrevBtns {
+  //mobile version (move to left and right side of screen, aligned center)
+    @media (max-width:950px ){
+      .prevBtn{
+        position: fixed;
+        top: 60%;
+        left: 3%;
+        animation: btn-left-movement 1s infinite;
+      }
+
+      .nextBtn {
+        position: fixed;
+        top:60%;
+        right: 3%;
+        animation: btn-right-movement 1s infinite;
+      }
+
+
+    
+    }
+}
+
+
+
+// "work" button slides up when page loads
+@keyframes slide-up {
+  0% {transform: translate(0px, 150px) ;}
+  100% {transform: translate(0px, 0px) ;}
+}
+
+
+//making "previous" btn move
+@keyframes btn-left-movement{
+  0%{
+    transform: translate(0px, 0px);
+  }
+  50%{
+    transform: translate(3.5px, 0px);
+  }
+  100%{
+    transform: translate(0px, 0px);
+  }
+}
+
+//making "next" btn move
+@keyframes btn-right-movement{
+  0%{
+    transform: translate(0px, 0px);
+  }
+  50%{
+    transform: translate(-3.5px, 0px);
+  }
+  100%{
+    transform: translate(0px, 0px);
+  }
+}

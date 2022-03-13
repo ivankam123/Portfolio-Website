@@ -1,0 +1,64 @@
+// Main Nav
+.main-nav {
+  display: none;
+
+  @include mq($desktop) {
+    display: block;
+    
+
+    .flex li {
+      margin: 0 1.5rem;
+      font-weight: bold;
+      font-size: 1.2rem;
+      z-index: 500;
+    }
+
+    .flex li a {
+      color: black;
+    }
+    // .flex li a:hover {
+    //   // text-shadow: 0 0 3px #fff, 0 0 5px #fff, 0 0 7px #008080, 0 0 20px #008080,
+    //   //   0 0 25px #008080, 0 0 30px #008080, 0 0 35px #008080;
+    // }
+
+    .bottom-work a{
+      position: fixed;
+      left: 50%;
+      bottom: 100px;
+      animation: slide-down 1.4s;
+
+    }
+
+    .left-about a {
+      position: fixed;
+      top: 50%;
+      left: 100px;
+      animation: slide-left 1s;
+    }
+
+    .right-contact a {
+      position: fixed;
+      top: 50%;
+      right: 100px;
+      animation: slide-right 1.7s;
+    }
+
+  }
+}
+
+@keyframes slide-down {
+  0% {transform: translate(0px, -185px) ;}
+  100% {transform: translate(0px, 0px) ;}
+}
+
+@keyframes slide-left {
+  0% {transform: translate(185px, 0px) ;}
+  100% {transform: translate(0px, 0px) ;}
+}
+
+@keyframes slide-right {
+  0% {transform: translate(-185px, 0px) ;}
+  100% {transform: translate(0px, 0px) ;}
+}
+
+

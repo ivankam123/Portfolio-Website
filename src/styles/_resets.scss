@@ -1,0 +1,51 @@
+html {
+  scroll-behavior: smooth;
+}
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  all: unset;
+  display: revert;
+}
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+a,
+a:hover,
+a:visited,
+a:active {
+
+  cursor: pointer;
+}
+
+.footer-email {
+  border-bottom: 0.5px solid #008080;
+}
+
+.footer-email:hover {
+  font-size: larger;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+table {
+  border-collapse: collapse;
+}
+textarea {
+  white-space: revert;
+}
+article {
+  width: fit-content;
+  justify-self: center;
+  @include mq($desktop) {
+    justify-self: self-start;
+  }
+}

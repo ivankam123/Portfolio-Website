@@ -1,0 +1,72 @@
+.about {
+  position:absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px dashed black;
+  padding: 4rem 8rem;
+  
+}
+
+
+// desktop view nav buttons
+.right-home {
+  display:none;
+  @include mq($desktop) {
+    display: block;
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: fixed;
+    top: 50%;
+    right: 100px;
+    animation: slide-right 1s;
+  }
+}
+
+.botright-work{
+  display:none;
+  @include mq($desktop) {
+    display: block;
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    animation: slide-botright-corner 1s;
+  }
+}
+
+@keyframes slide-right {
+  0% {transform: translate(-170px, 0px) ;}
+  100% {transform: translate(0px, 0px) ;}
+}
+
+@keyframes slide-botright-corner {
+  0% {transform: translate(-170px, -170px) ;}
+  100% {transform: translate(0px, 0px) ;}
+}
+
+
+//border for content 
+.cornerbox {
+  background-color: black;
+
+}
+
+.cornerbox1 {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  height: 45px;
+  width: 45px;
+}
+
+.cornerbox2 {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  height: 20px;
+  width: 20px;
+}
+
+

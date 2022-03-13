@@ -1,0 +1,110 @@
+.home-section{
+    position:absolute;
+    
+    //mobile version
+    @media (max-width: 950px){
+      top:50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 200px;
+    }
+
+    // desktop version
+    @include mq($desktop){
+      top:50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+    }
+    
+    
+}
+
+// contact button
+.cta-contact {
+  @media (max-width: 650px){
+    border: 1px solid black;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 6rem;
+  }
+
+  @media (min-width: 650px){    /* mobile version*/
+    border: 1px solid black;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 8rem;
+  }
+
+  @include mq($desktop){    /* desktop version*/
+    border: 1px solid black;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 10rem;
+  }
+    
+}
+  
+.mobile-bot-about{
+    @include mq($desktop) {
+      display: none;
+    }
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: fixed;
+    left: 50%;
+    bottom: 100px;
+}
+
+
+//animating the home page texts
+.first-line {
+  animation: moveRight 0.9s;
+}
+
+.second-line {
+  animation: moveLeft 1.2s;
+}
+
+.third-line {
+  animation: moveRight 1.5s;
+  white-space: nowrap;
+  display: inline;
+}
+
+//logo
+.text-logo{
+  position: absolute;
+  left: 5%;
+  cursor: pointer;
+}
+
+
+
+@keyframes moveRight {
+  0%{
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveLeft {
+  0%{
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

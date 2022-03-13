@@ -1,0 +1,13 @@
+header {
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  padding: em(30) em(20);
+  z-index: 50;
+  .header-content {
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}

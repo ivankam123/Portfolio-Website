@@ -1,0 +1,248 @@
+@include mq($tablet) {
+    .cursor {
+        margin-left: -1rem;
+        margin-top: -.7rem;
+        top: 50%;
+        left: 50%;
+        background-color: #4ab6ad;
+        position: absolute;
+        border-radius: 50%;
+        border: 5px solid #4ab6ad;
+        transition: 0.1s;
+        box-shadow: 0 0 3px #4ab6ad,
+                    0 0 5px #4ab6ad,
+                    0 0 7px #4ab6ad;
+        overflow: hidden;
+        animation: animateColor 5s linear infinite;
+    }
+
+    .cursor1 {
+        transition: 0.01s;
+    }
+    .cursor2 {
+        transition: 0.03s;
+    }
+    .cursor3 {
+        transition: 0.05s;
+    }
+    .cursor4 {
+        transition: 0.07s;
+    }
+    .cursor5 {
+        transition: 0.09s;
+    }
+    .cursor6 {
+        transition: 0.011s;
+    }
+    .cursor7 {
+        transition: 0.013s;
+    }
+    .cursor8 {
+        transition: 0.015s;
+    }
+    .cursor9 {
+        transition: 0.017s;
+    }
+    .cursor10 {
+        transition: 0.019s;
+    }
+    .cursor11 {
+        transition: 0.021s;
+    }
+    .cursor12 {
+        transition: 0.023s;
+    }
+    .cursor13 {
+        transition: 0.025s;
+    }
+    .cursor14 {
+        transition: 0.027s;
+    }
+    .cursor15 {
+        transition: 0.029s;
+    }
+    .cursor16 {
+        transition: 0.031s;
+    }
+    .cursor17 {
+        transition: 0.033s;
+    }
+    .cursor18 {
+        transition: 0.035s;
+    }
+    .cursor19 {
+        transition: 0.037s;
+    }
+    .cursor20 {
+        transition: 0.039s;
+    }
+    .cursor21 {
+        transition: 0.041s;
+    }
+    .cursor22 {
+        transition: 0.043s;
+    }
+    .cursor23 {
+        transition: 0.045s;
+    }
+    .cursor24 {
+        transition: 0.047s;
+    }
+    .cursor25 {
+        transition: 0.049s;
+    }
+    .cursor26 {
+        transition: 0.051s;
+    }
+    .cursor27 {
+        transition: 0.053s;
+    }
+    .cursor28 {
+        transition: 0.055s;
+    }
+    .cursor29 {
+        transition: 0.057s;
+    }
+    .cursor30 {
+        transition: 0.059s;
+    }
+    .cursor31 {
+        transition: 0.061s;
+    }
+    .cursor32 {
+        transition: 0.063s;
+    }
+    .cursor33 {
+        transition: 0.065s;
+    }
+    .cursor34 {
+        transition: 0.067s;
+    }
+    .cursor35 {
+        transition: 0.069s;
+    }
+    .cursor36 {
+        transition: 0.071s;
+    }
+    .cursor37 {
+        transition: 0.073s;
+    }
+    .cursor38 {
+        transition: 0.075s;
+    }
+    .cursor39 {
+        transition: 0.077s;
+    }
+    .cursor40 {
+        transition: 0.079s;
+    }
+    .cursor41 {
+        transition: 0.081s;
+    }
+    .cursor42 {
+        transition: 0.083s;
+    }
+    .cursor43 {
+        transition: 0.085s;
+    }
+    .cursor44 {
+        transition: 0.087s;
+    }
+    .cursor45 {
+        transition: 0.089s;
+    }
+    .cursor46 {
+        transition: 0.091s;
+    }
+    .cursor47 {
+        transition: 0.093s;
+    }
+    .cursor48 {
+        transition: 0.095s;
+    }
+    .cursor49 {
+        transition: 0.097s;
+    }
+    .cursor50 {
+        transition: 0.099s;
+    }
+    .cursor51 {
+        transition: 0.101s;
+    }
+    .cursor52 {
+        transition: 0.103s;
+    }
+    .cursor53 {
+        transition: 0.105s;
+    }
+    .cursor54 {
+        transition: 0.107s;
+    }
+    .cursor55 {
+        transition: 0.109s;
+    }
+    .cursor56 {
+        transition: 0.111s;
+    }
+    .cursor57 {
+        transition: 0.113s;
+    }
+    .cursor58 {
+        transition: 0.115s;
+    }
+    .cursor59 {
+        transition: 0.117s;
+    }
+    .cursor60 {
+        transition: 0.119s;
+    }
+    .cursor61 {
+        transition: 0.121s;
+    }
+    .cursor62 {
+        transition: 0.123s;
+    }
+    .cursor63 {
+        transition: 0.125s;
+    }
+    .cursor64 {
+        transition: 0.127s;
+    }
+    .cursor65 {
+        transition: 0.129s;
+    }
+    .cursor66 {
+        transition: 0.131s;
+    }
+    .cursor67 {
+        transition: 0.133s;
+    }
+    .cursor68 {
+        transition: 0.135s;
+    }
+    .cursor69 {
+        transition: 0.137s;
+    }
+    .cursor70 {
+        transition: 0.139s;
+    }
+
+    @keyframes animateColor
+    {
+        0%
+        {
+            filter: hue-rotate(0deg);
+        }
+        100%
+        {
+            filter: hue-rotate(360deg);
+        }
+    }
+}
+
+@media (max-width:950px){
+    .cursor {
+        display: none;
+    }
+}
+

@@ -1,0 +1,16 @@
+.logo-container {
+  // img {
+  //   width: em(150);
+  // }
+  @include mq($desktop){
+    left: 5%;
+  }
+
+  @media (max-width: 950px){
+    left: 50%;
+  }
+  position: absolute;
+  cursor: pointer;
+}
+
+
