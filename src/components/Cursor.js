@@ -10,6 +10,7 @@ function Cursor() {
   })
 
   return (
+    //mouse effect, a lot of divs 
     <div className="trail">
           <div className="cursor cursor1" 
                 style={{
@@ -311,7 +312,7 @@ function Cursor() {
                   top: cursorY + 'px'
                 }}>
           </div>
-          <div className="cursor cursor51" 
+          {/* <div className="cursor cursor51" 
                 style={{
                   left: cursorX + 'px',
                   top: cursorY + 'px'
@@ -430,7 +431,7 @@ function Cursor() {
                   left: cursorX + 'px',
                   top: cursorY + 'px'
                 }}>
-          </div>
+          </div> */}
 
       </div>
   )

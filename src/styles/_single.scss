@@ -1,16 +1,22 @@
+//styling the "back to works" button
 .single-main {
-
+  
 
   header {
   display: none;
 
   @include mq($desktop) {
-    margin-top: -2rem;
+    margin-top: -1rem;
     display: flex;
     font-weight: bold;
     font-size: 1.2rem;
     justify-content: center;
-    animation: slide-up 1s;
+    animation: slide-up 0.5s;
+     //desktop nav buttons
+     font-family: 'Special Elite', cursive; 
+     a:hover{
+       font-size: 1.3rem;
+     } 
   }
   }
   
@@ -19,50 +25,237 @@
 
 
 
-
+// styling the main content mobile and desktop version
 .single-project-section {
+  p {
+    font-family: 'League Spartan', sans-serif;
+  }
+  
+ .singleToolsUsed li{ 
+  padding: 0.5px 5px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: bolder;
+  border-radius: 5px;
+ }
+
+ .single-cta-contact{
+    border: 1px solid black;
+ }
+
 
   //--------------------------mobile-tablet content section
   @media (max-width: 950px){
-    padding: 0 64px;
+
     margin-top: 85px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    .single-main-img {
-      max-height: 300px;
-      max-width: 400px;
+    .top-section-single {
+      padding: 0 64px;
+      line-height: 3rem;
+      
+    }
+    //styling main images at the top
+    .single-hero-img-box{
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: flex-end;
+      justify-content: center;
+      .single-main-img {
+        min-height: 200px;
+        max-height: 300px;
+        width: 80%;
+        border: 5px solid black;
+        min-width: 250px;
+      }
+  
+      .single-mobile-img{
+        height: 150px;
+        border: 5px solid black;
+        border-radius: 10px;
+        width: 15%;
+        max-width: 87px;
+        min-width: 78px;
+  
+        @media (max-width:450px){
+          display: none;
+        }
+      }
     }
 
-    .design-section, .development-section, .liveSite{
-        max-width: 400px;
-
+    //tools used on single page
+    .singleToolsUsed{
+      width: 80%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin: 1.5rem auto;
 
     }
+    
+    .project-desc{
+      margin-bottom: 1rem;
+    }
+
+    .design-section, .development-section, .liveSite-section{
+        margin-bottom: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 1rem 10%;
+        line-height: 3rem;
+        img {
+          width: 90%;
+          margin: 0 auto;
+          max-height: 350px;
+          max-width: 500px;
+        }
+
+    }
+
+    // styling CTA contact button on singles page 
+    .single-cta-contact{
+      width: 30%;
+      margin: 0 auto;
+      text-align: center;
+      margin-bottom: 2rem;
+      
+    }
+    
+    
+
 
   }
 
 
   // ------------------------------desktop content section
   @include mq($desktop) {
-   img {
-     max-width: 500px;
-     max-height: 400px;
-   }
+    
+   
+    margin: 0 auto;
+
+  .top-section-single {
+    padding: 0 5rem;
+
+    .top-section-single-text{
+     width: 100%;
+     padding: 2rem 10% 0rem;
+    }
   }
+
+  p{
+    line-height: 3rem;
+  }
+  .single-hero-img-box{
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      align-items: flex-end;
+      justify-content: center;
+    .single-main-img{
+      width: 70%;
+      height: 550px;
+      border: 5px solid black;
+      min-width: 750px;
+    }
+    .single-mobile-img{
+      width: 15%;
+      height: 250px;
+      border: 5px solid black;
+      border-radius: 10px;
+      max-width: 150px;
+    }
+
+  }
+
+   ul {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-evenly;
+     margin: 2rem;
+
+     li{
+       border: 1px solid black;
+     }
+   }
+
+   .project-desc {
+     margin: 4rem;
+     display: flex;
+     justify-content: center;
+   }
+   .design-section{
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-between;
+   }
+
+   .development-section{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+
+  .liveSite-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .design-section, .development-section, .liveSite-section {
+    img {
+      width: 50%;
+      min-width: 370px;
+      max-width: 400px;
+      min-height: 300px;
+      max-height: 300px;
+    }
+    p{
+      width: 40%;
+      margin: 0 auto;
+    }
+    width: 100%;
+    margin: 2rem auto;
+    padding: 2rem 10%;
+  }
+
+  .single-cta-contact{
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    max-width: 250px;
+    margin: 3rem auto;
+  }
+
 }
+}
+
+
 
 
 
 //Styling next and previous buttons
 .nextPrevBtns {
+ 
+
+  
   //mobile version (move to left and right side of screen, aligned center)
     @media (max-width:950px ){
+      width: 75%;
+      margin-bottom: 3rem;
       .prevBtn{
         position: fixed;
         top: 60%;
         left: 3%;
         animation: btn-left-movement 1s infinite;
+        span {
+          display: none;
+        }
       }
 
       .nextBtn {
@@ -70,18 +263,71 @@
         top:60%;
         right: 3%;
         animation: btn-right-movement 1s infinite;
+        span {
+          display: none;
+        }
+      }
+    }
+    @include mq($desktop){
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 3rem auto;
+      width: 80%;
+      span{
+        margin-top: 5px;
+         //desktop nav buttons
+      font-family: 'Special Elite', cursive;  
+      }
+      .prevBtn{
+        // position: fixed;
+        // top: 60%;
+        // left: 3%;
+        animation: btn-left-movement 1s infinite;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+       
       }
 
+      .nextBtn {
+        // position: fixed;
+        // top:60%;
+        // right: 3%;
+        animation: btn-right-movement 1s infinite;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-    
+      }
     }
 }
 
+//styling livesite button
+.liveSite-text-btn-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  @media (max-width:950px){
+    margin: 0 auto;
+  }
+
+  a{
+    border: 3px solid black;
+    padding: 0.3rem 1.8em;
+    border-radius: 9em;
+    font-family: "Special Elite", cursive;
+    
+  }
+}
 
 
 // "work" button slides up when page loads
 @keyframes slide-up {
-  0% {transform: translate(0px, 150px) ;}
+  0% {transform: translate(0px, 10px) ;}
   100% {transform: translate(0px, 0px) ;}
 }
 

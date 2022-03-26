@@ -1,35 +1,153 @@
-/* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
-    border: 1px solid rgb(141, 140, 140); /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-  }
+.contact {
   
-  /* Style the submit button with a specific background color etc */
-  input[type=submit] {
-    background-color: #04AA6D;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+
+  h2 {
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
   }
-  
-  /* When moving the mouse over the submit button, add a darker green color */
-  input[type=submit]:hover {
-    background-color: #45a049;
+
+  article{
+    padding: 2rem;
   }
-  
-  /* Add a background color and some padding around the form */
-  .container {
-    border-radius: 5px;
-    padding: 20px;
-    width: 70%;
-    margin: 0 auto;
+
+  p {
+    font-family: 'League Spartan', sans-serif;
   }
+
   
+
+  //styling contact content
+@media (max-width:950px){
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+
+    h2{
+      display: flex;
+      justify-content: center;
+      font-size: 1.7rem;
+    }
+
+    .socialMedia-icons{
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      margin-top: 2rem;
+      .instaIcon, .linkedinIcon, .gitIcon, .gmailIcon{
+        width: 40px;
+        height: 40px;
+      }
+      
+    }
+
+}
+
+@include mq($desktop){
+  margin-top: 4rem;
+  position:absolute;
+    top:  50%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+  //  border: 4px dashed ;
+  //   border-radius: 10px;
+    margin-top: 0rem;
+  h2{
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .contact-content {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+  
+  }
+  .socialMedia-icons{
+    display: flex;
+    justify-content: space-between;
+    gap: 7rem;
+    margin-top: 10rem;
+    
+    
+    .instaIcon, .linkedinIcon, .gitIcon, .gmailIcon{
+      width: 80px;
+      height: 80px;
+      
+    }
+    
+  }
+}
+  
+}
+
+
+// nav buttons
+.left-home{
+  display: none;
+
+  @include mq($desktop) {
+    display: block;
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: fixed;
+    top: 50%;
+    left: 100px;
+    animation: slide-left 1s;
+     //desktop nav buttons
+     font-family: 'Special Elite', cursive;  
+  }
+}
+
+.botleft-home{
+  display: none;
+
+  @include mq($desktop) {
+    display: block;
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+    animation: slide-botleft-corner 1s;
+     //desktop nav buttons
+     font-family: 'Special Elite', cursive;  
+  }
+}
+
+.left-home:hover, .botleft-home:hover{
+  font-size: 1.3rem;
+}
+
+@keyframes slide-left {
+  0% {transform: translate(170px, 0px) ;}
+  100% {transform: translate(0px, 0px) ;}
+}
+
+@keyframes slide-botleft-corner {
+  0% {transform: translate(170px, -170px) ;}
+  100% {transform: translate(0px, 0px) ;}
+}
+
+// styling corner boxes
+.contact-box1 {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  height: 45px;
+  width: 45px;
+}
+
+.contact-box2 {
+  position: absolute;
+  bottom: -12px;
+  left: -12px;
+  height: 25px;
+  width: 25px;
+}

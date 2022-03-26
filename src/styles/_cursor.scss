@@ -1,19 +1,20 @@
+// cursor only shows in desktop view.
 @include mq($tablet) {
     .cursor {
-        margin-left: -1rem;
-        margin-top: -.7rem;
+        margin-left: 1rem;
+        margin-top: .7rem;
         top: 50%;
         left: 50%;
-        background-color: #4ab6ad;
+        // background-color: #4ab6ad;
         position: absolute;
         border-radius: 50%;
-        border: 5px solid #4ab6ad;
+        // border: 5px solid #4ab6ad;
         transition: 0.1s;
-        box-shadow: 0 0 3px #4ab6ad,
-                    0 0 5px #4ab6ad,
-                    0 0 7px #4ab6ad;
-        overflow: hidden;
-        animation: animateColor 5s linear infinite;
+        // box-shadow: 0 0 3px #4ab6ad,
+        //             0 0 5px #4ab6ad,
+        //             0 0 7px #4ab6ad;
+    
+        // animation: animateColor 5s linear infinite;
     }
 
     .cursor1 {

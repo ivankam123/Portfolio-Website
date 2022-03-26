@@ -1,17 +1,146 @@
 .about {
-  position:absolute;
-  top:50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 3px dashed black;
-  padding: 4rem 8rem;
+  
+
+  h2 {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  p {
+    font-family: 'League Spartan', sans-serif;
+  }
+
+ 
+  
+//about content styling
+ 
+  //mobile version
+ 
+    @media (max-width:950px){
+      display: flex;
+      justify-content: center;
+      // border: 4px dashed ;
+      // border-radius: 10px;
+      margin: 4rem auto;
+      width: 77%;
+      padding: 0 2.5rem 1.5rem;
+      position: relative;
+          article {
+
+            .about-desc{
+              width: 55%;
+              @media (max-width: 550px){
+                width: 70%;
+              }
+              margin: 0 auto;
+              p{
+         
+                margin-top: 2rem;
+                line-height: 3rem;
+              }
+            }
+            img {
+              width: 50%;
+              min-width: 170px;
+              height: 250px;
+              margin: 1rem auto;
+            }
+            
+
+            h2{
+              display: flex;
+              justify-content: center;
+            }
+            .tools-used-title{
+              font-weight: bold;
+            }
+            ul{
+              display: flex;
+              flex-direction: row;
+              gap: 10%;
+              justify-content: center;
+
+              li{
+                list-style: square;
+              }
+
+              
+            }
+          }
+      
+    }
+
+    @include mq($desktop){ 
+      position:absolute;
+      top:50%;
+      left: 40%;
+      transform: translate(-40%, -50%);
+      // border: 4px dashed ;
+      // border-radius: 10px;
+      margin-top: 5rem;
+      padding: 2rem 4rem;
+      width: 70%;
+      h2{
+        display: flex;
+        justify-content: center;
+        
+      }
+      
+      article{
+        .about-content {
+          display: flex;
+          flex-direction: row;
+          gap: 2rem;
+          align-items: center;
+          
+          .about-desc{
+           
+            line-height: 2rem;
+            width: 60%;
+            p{
+              margin-top: 2rem;
+            }
+          }
+          h2{
+            font-size: 2rem;
+          }
+    
+          img {
+            height: 300px;
+          }
+          .tools-used-title{
+            font-weight: bold;
+          }
+          ul{
+            display: flex;
+            flex-direction: row;
+            gap: 10%;
+            justify-content: center;
+
+            li{
+              list-style: square;
+            }
+          }
+
+        }
+        
+
+        
+       
+      }
+
+      
+    }
   
 }
 
 
 // desktop view nav buttons
+.right-home:hover, .botright-work:hover{
+    font-size: 1.3rem;
+}
 .right-home {
   display:none;
+  
   @include mq($desktop) {
     display: block;
     font-weight: bold;
@@ -20,6 +149,9 @@
     top: 50%;
     right: 100px;
     animation: slide-right 1s;
+      //desktop nav buttons
+      font-family: 'Special Elite', cursive;
+    
   }
 }
 
@@ -29,10 +161,15 @@
     display: block;
     font-weight: bold;
     font-size: 1.2rem;
-    position: absolute;
+    position: fixed;
     bottom: 100px;
     right: 100px;
     animation: slide-botright-corner 1s;
+     //desktop nav buttons
+     font-family: 'Special Elite', cursive;  
+     a:hover{
+      font-size: 1.3rem;
+    }
   }
 }
 
@@ -46,27 +183,23 @@
   100% {transform: translate(0px, 0px) ;}
 }
 
-
-//border for content 
-.cornerbox {
-  background-color: black;
-
-}
-
+// corner boxes animation in about page
 .cornerbox1 {
   position: absolute;
-  top: -20px;
+  top: -30px;
   left: -20px;
-  height: 45px;
-  width: 45px;
+  font-size: 45px;
 }
 
 .cornerbox2 {
   position: absolute;
-  bottom: -10px;
-  right: -10px;
-  height: 20px;
-  width: 20px;
+  bottom: -20px;
+  right: -12px;
+  font-size: 25px;
 }
+
+
+
+
 
 

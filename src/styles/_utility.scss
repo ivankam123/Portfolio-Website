@@ -1,35 +1,10 @@
-.align-center {
-  align-items: center;
+
+
+// for use effect so the stars dont trigger scroll when overflown
+.overflow-hidden {
+  overflow: hidden;
 }
-.justify-center {
-  justify-content: center;
-}
-.justify-between {
-  justify-content: space-between;
-}
-.justify-evenly {
-  justify-content: space-evenly;
-}
-.gap-sm {
-  gap: em(16);
-}
-.gap-md {
-  gap: em(40);
-}
-.gap-lg {
-  gap: em(56);
-}
-.gap-xl {
-  gap: em(72);
-}
-.stacked {
-  @include mq($desktop) {
-    display: grid;
-  }
-}
-.stacked > * {
-  @include mq($desktop) {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
+
+.overflowX-hidden{
+  overflow-x: hidden;
 }

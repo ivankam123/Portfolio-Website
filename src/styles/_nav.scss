@@ -1,4 +1,4 @@
-// Main Nav
+// Main Nav on home page
 .main-nav {
   display: none;
 
@@ -11,11 +11,12 @@
       font-weight: bold;
       font-size: 1.2rem;
       z-index: 500;
+      :hover{
+        font-size: 1.3rem;
+      }
     }
 
-    .flex li a {
-      color: black;
-    }
+   
     // .flex li a:hover {
     //   // text-shadow: 0 0 3px #fff, 0 0 5px #fff, 0 0 7px #008080, 0 0 20px #008080,
     //   //   0 0 25px #008080, 0 0 30px #008080, 0 0 35px #008080;
@@ -26,6 +27,7 @@
       left: 50%;
       bottom: 100px;
       animation: slide-down 1.4s;
+      
 
     }
 
@@ -46,6 +48,7 @@
   }
 }
 
+// animating the texts to slide left right and bottom
 @keyframes slide-down {
   0% {transform: translate(0px, -185px) ;}
   100% {transform: translate(0px, 0px) ;}

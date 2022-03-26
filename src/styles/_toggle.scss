@@ -1,0 +1,50 @@
+//the light and dark mode button in the top
+.toggleBtn {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 5px;
+    box-shadow: 3px 3px 0 gray;
+    :hover{
+        cursor: pointer;
+        
+    }
+
+    
+   
+    //button in mobile view
+    @media (max-width: 950px){
+        position: fixed;
+        left: 5%;
+        top: 9%;
+        
+        .sunIcon, .moonIcon{
+            position: relative;
+            top: 10%;
+            left: 3px;
+        }
+
+    }
+
+
+    //styling where the toggle btn will be in desktop view
+    @include mq($desktop){
+        position: absolute;
+        left: 49%;
+        top: 3%;
+        z-index: 999;
+        
+        
+        .sunIcon, .moonIcon{
+            position: relative;
+            top: 10%;
+            left: 3px;
+        }
+    }
+
+    
+}
+
+.sunIcon {
+    fill: white;
+}

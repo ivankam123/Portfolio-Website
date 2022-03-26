@@ -76,7 +76,10 @@ function Single() {
   
   // const randomProjectNumber = Math.floor(Math.random()* Projects.length + 1);
   
-
+  useEffect(() => {
+    document.body.classList.remove("overflow-hidden");
+    document.body.classList.add("overflowX-hidden");
+  }, []);
  
 
   useEffect(() => {
@@ -91,22 +94,30 @@ function Single() {
           <Logo/>
           <Hamburger/>
           <header>
-            <a href="/portfolio/work" className='top-work'>Work</a>
+            <a href="/portfolio/work" className='top-work' aria-label="link back to work">Back to Works</a>
           </header>
           <motion.section className="single-project-section" initial={{opacity:0}} animate={{opacity: 1}} transition={{duration: 1.3}}>
                     {project !== null && (
                       <>
-                        <img src={project.img} className="single-main-img"></img>
-                        <h2>{project.name}</h2>
-                        <p>{project.date}</p>
+                      <div className="top-section-single">
+                          <div className="single-hero-img-box">
+                                <img src={project.img} className="single-main-img"></img>
+                                <img src={project.mobileImg} className="single-mobile-img"></img>
+                            </div>
+                            <div className="top-section-single-text">
+                                <h2>{project.name}</h2>
+                             
+                                
+                                <ul className="singleToolsUsed">
+                                    {project.tools.map((project, index) => (
+                                      <li key={index}>{project}</li>
+                                    ))}
+                                </ul>
+                                
+                                <p className="project-desc">{project.longDesc}</p>
+                            </div>
+                      </div>
                         
-                        <ul>
-                            {project.tools.map((project, index) => (
-                              <li key={index}>{project}</li>
-                            ))}
-                        </ul>
-                        
-                        <p>{project.desc}</p>
                         <div className="design-section">
                           <img src={project.designImg} className="designImg"></img>
                           <p>{project.designDesc}</p>
@@ -117,26 +128,43 @@ function Single() {
                         </div>
                         <div className="liveSite-section">
                           <img src={project.liveSiteImg} className="liveSiteImg"></img>
-                          <p>{project.liveSiteDesc}</p>
+                          <div className="liveSite-text-btn-section">
+                            <p>{project.liveSiteDesc}</p>
+                            <motion.a href={project.liveSiteLink} whileHover={{scale: 1.1, originX: 0}} target="_blank" aria-label="link to live site">Live Site</motion.a>
+                          </div>
+                         
                         </div>
 
-                      
+                        {/* <a href="/portfolio/contact" className="single-cta-contact">Contact Me!</a> */}
                       </>
                     )}
             </motion.section>
+
+            {/* next and previous projects buttons */}
             <div>
                 {project !== null && (
                       <>
                           {/* next and previous projects buttons */}
                           <div className="nextPrevBtns">
-                            <Link to={`/project/${Projects[parseInt(project.id) === 1 ? Projects.length - 1 : parseInt(project.id) - 2].id}`} className="prevBtn"><LeftArrow className="leftArrow" animate={{scale:0.5}} transition={{duration:2}}/></Link>
-                            <Link to={`/project/${Projects[parseInt(project.id) === Projects.length ? 0 : parseInt(project.id)].id}`} className="nextBtn"><RightArrow className="rightArrow"/></Link>
+                          <Link to={`/project/${Projects[parseInt(project.id) === 1 ? Projects.length - 1 : parseInt(project.id) - 2].id}`} aria-label="link to next project" className="prevBtn"><LeftArrow className="leftArrow" animate={{scale:0.5}} transition={{duration:2}}/>
+                                <span>
+                                  {
+                                    Projects[parseInt(project.id) === 1 ? Projects.length - 1 : parseInt(project.id) - 2].name
+                                  }
+                                </span></Link>
+                          <Link to={`/project/${Projects[parseInt(project.id) === Projects.length ? 0 : parseInt(project.id)].id}`} aria-label="link to previous project" className="nextBtn"><RightArrow className="rightArrow"/>
+                              <span>
+                                {
+                                    [Projects[parseInt(project.id) === Projects.length ? 0 : parseInt(project.id)].name]
+                                  } 
+                              </span>
+                          </Link>
                         </div>
 
                       </>
                     )}
             </div>             
-
+                    
       </main>
   );
 }
